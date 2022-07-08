@@ -42,6 +42,10 @@ border-radius: 15px;
 
 &:hover{
     transform: scale(1.05);
+
+    img{
+    transform: scale(1.15);
+    }
 }
 `
 
