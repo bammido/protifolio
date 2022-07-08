@@ -5,16 +5,22 @@ import HeaderComponent from './Components/Header';
 import FooterComponent from './Components/Footer';
 import { useState } from 'react';
 import Projects from './Components/Projects';
+import About from './Components/About';
 
 
 function App() {
-  const [isDarktheme, setIsDarkTheme] = useState(false)
+  const actualTheme = localStorage.getItem('actualTheme')
+
+  const [isDarktheme, setIsDarkTheme] = useState(actualTheme===`true`? true : false)
+
+  
 
   return (
     <ThemeProvider theme={isDarktheme? darkTheme : lightTheme}>
       <GlobalStyle />
       <MainDiv className="App">
         <HeaderComponent theme={isDarktheme} setTheme={setIsDarkTheme}/>
+        <About />
         <Body>
           <Projects />
         </Body>

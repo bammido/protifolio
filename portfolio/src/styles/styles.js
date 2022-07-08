@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 *{
     font-size: 16px;
+    line-height: 1.5em;
     transition: 200ms;
     font-family: 'Outfit', sans-serif;
 }
@@ -17,11 +18,17 @@ body{
 }
 
 h1{
-    font-size: 24px;
+    font-size: 30px;
 }
 
 h2{
-    font-size: 20px;
+    font-size: 24px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Chillax', serif;
+    filter: drop-shadow(5px 5px 5px hsl(0deg 0% 0% / 0.3));
+
 }
 
 `
@@ -80,6 +87,9 @@ object-fit: cover;
 background-color: transparent;
 display: flex;
 cursor: pointer;
+
+position: fixed;
+left: 20px;
 
 &:hover{
     opacity: 0.7;
