@@ -45,9 +45,9 @@ const About = () =>{
     return <MainDiv>
     <h1>{`<coder> Bryan Fernandes </coder>`}</h1>
 
-    <ImageDiv>
+    {/* <ImageDiv>
         <img src={foto_cv} />
-    </ImageDiv>
+    </ImageDiv> */}
 
     <p>
         Desenvolvedor Full Stack em desenvolvimento, apaixonado em tornar problemas complexos em problemas simples.
