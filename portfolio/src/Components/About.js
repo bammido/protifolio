@@ -13,13 +13,19 @@ align-self: center;
 
 text-align: center;
 
-
+div  {
+position: fixed;
+right: 0;
+bottom: 0;
+}
 h1{
     
     font-size: 3em;
+    z-index: 1;
 }
 
 p{
+    z-index: 1;
     font-size: 1.5em;
 }
 
@@ -40,10 +46,32 @@ overflow: hidden;
 
 `
 
-const About = () =>{
+const About = ({theme}) =>{
 
     return <MainDiv>
     <h1>{`<coder> Bryan Fernandes </coder>`}</h1>
+    
+    {theme?
+        <div class="badge-base LI-profile-badge"
+        data-locale="pt_BR" data-size="medium" 
+        data-theme="dark" data-type="VERTICAL" 
+        data-vanity="bryan-fernandes-de-oliveira-8085671a8" 
+        data-version="v1">
+        <a class="badge-base__link LI-simple-link" 
+        href="https://br.linkedin.com/in/bryan-fernandes-de-oliveira-8085671a8?trk=profile-badge">
+          Bryan Fernandes de Oliveira</a></div>   
+             :
+             <div class="badge-base LI-profile-badge"
+             data-locale="pt_BR" 
+             data-size="medium" 
+             data-theme="light"
+            data-type="VERTICAL" 
+            data-vanity="bryan-fernandes-de-oliveira-8085671a8" 
+            data-version="v1"><a class="badge-base__link LI-simple-link" 
+            href="https://br.linkedin.com/in/bryan-fernandes-de-oliveira-8085671a8?trk=profile-badge">
+            Bryan Fernandes de Oliveira</a>
+            </div>      
+      }
 
     {/* <ImageDiv>
         <img src={foto_cv} />

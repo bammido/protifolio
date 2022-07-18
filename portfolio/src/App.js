@@ -1,12 +1,11 @@
 import { GlobalStyle, MainDiv, Body } from './styles/styles';
 import {lightTheme, darkTheme} from './styles/theme'
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import HeaderComponent from './Components/Header';
 import FooterComponent from './Components/Footer';
 import { useState } from 'react';
 import Projects from './Components/Projects';
 import About from './Components/About';
-
 
 function App() {
   const actualTheme = localStorage.getItem('actualTheme')
@@ -18,9 +17,10 @@ function App() {
   return (
     <ThemeProvider theme={isDarktheme? darkTheme : lightTheme}>
       <GlobalStyle />
+      
       <MainDiv className="App">
         <HeaderComponent theme={isDarktheme} setTheme={setIsDarkTheme}/>
-        <About />
+        <About theme={isDarktheme}/>
         <Body>
           <Projects />
         </Body>
